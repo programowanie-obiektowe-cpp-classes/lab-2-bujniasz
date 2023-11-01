@@ -17,10 +17,7 @@ class ResourceManager
         //METODY SPECJALNE:
 
         //1.Destruktor
-        ~ResourceManager()
-        {
-            //std::cout << "destruktor nisczy obiekt" << "\n";
-        }
+        ~ResourceManager() = default;
 
         //2.Konstruktor kopiujacy
         ResourceManager(const ResourceManager& rm)
