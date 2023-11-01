@@ -14,31 +14,6 @@ class ResourceManager
             return res.get();
         }
 
-        //METODY SPECJALNE:
-
-        //1.Destruktor
-        ~ResourceManager() = default;
-
-
-        //2.Konstruktor kopiujacy
-        ResourceManager(const ResourceManager& rm) : res(rm.res)
-        {
-
-        }
-
-        //3.Kopiujacy operator przypisania
-        ResourceManager& operator=(const ResourceManager& rm)
-        {
-            if (this != &rm)
-            {
-                res = rm.res;
-            }
-            return *this;
-        }
-
-
-
-
     private:
         Resource res; //zarządzany obiekt klasy resource
 };
