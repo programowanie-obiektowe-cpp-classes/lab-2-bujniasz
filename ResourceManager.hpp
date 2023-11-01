@@ -4,14 +4,14 @@
 
 class ResourceManager
 {
-        public:
+    public:
         //kontruktor domyslny, czerpiacy z Resource
         ResourceManager() : res() {}
 
         //funkcja zwracajaca wartosc metody get dla obiektu klasy Resource
-        double get(Resource obiekt)
+        double get()
         {
-            return obiekt.get();
+            return res.get();
         }
 
         //METODY SPECJALNE:
@@ -31,7 +31,7 @@ class ResourceManager
         //3.Kopiujacy operator przypisania
         ResourceManager& operator=(const ResourceManager& rm)
         {
-            
+            return *this;
         }
 
 
