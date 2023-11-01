@@ -14,6 +14,10 @@ class ResourceManager
             return res.get();
         }
 
+        ~ResourceManager()
+        {
+        }
+
     private:
         Resource res; //zarządzany obiekt klasy resource
 };
