@@ -15,6 +15,28 @@ class ResourceManager
             return res->get();
         }
 
+        //METODY SPECJALNE:
+
+        //1.Destruktor
+        ~ResourceManager()
+        {
+        }
+
+        //2.Konstruktor kopiujacy
+        ResourceManager(const ResourceManager& rm) : res(std::make_unique<Resource>(*rm.res)) 
+        {
+        }
+
+        //3.Kopiujacy operator przypisania
+        ResourceManager& operator=(const ResourceManager& rm)
+        {
+            if (this != &rm)
+            {
+                res = std::make_unique<Resource>(*rm.res);
+            }
+            return *this;
+        }
+
     private:
         std::unique_ptr<Resource> res; //zarządzany obiekt klasy resource - wskaznik inteligentny
 };
