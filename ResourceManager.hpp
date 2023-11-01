@@ -19,8 +19,9 @@ class ResourceManager
         //1.Destruktor
         ~ResourceManager() = default;
 
+
         //2.Konstruktor kopiujacy
-        ResourceManager(const ResourceManager& rm)
+        ResourceManager(const ResourceManager& rm) : res(rm.res)
         {
 
         }
@@ -28,6 +29,10 @@ class ResourceManager
         //3.Kopiujacy operator przypisania
         ResourceManager& operator=(const ResourceManager& rm)
         {
+            if (this != &rm)
+            {
+                res = rm.res;
+            }
             return *this;
         }
 
